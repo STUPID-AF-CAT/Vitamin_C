@@ -6,15 +6,9 @@
 int main(void)
 {
     char saying [] = "For the meek shall inherit the earth\0";
-    char temp [sizeof(saying)];
-    strcpy(temp, saying);
-    for (int i = 0; i < ((sizeof(saying) * 2) - 1); i++)
+    for (int i = 0; i < sizeof(saying); i++)
     {
-        if ((i % 2) == 0)
-        {
-            saying[i] = temp[i/2];
-        }
-        else
+        if (saying[i] == ' ')
         {
             saying[i] = 10;
         }
