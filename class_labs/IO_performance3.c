@@ -46,7 +46,7 @@ int main(void)
     printf("%s\t\n%s\t\n%s\t\n", first_name, middle_name, last_name);
 
     int int_one, int_two;
-    printf("Now give me to integers separated by a * : ");
+    printf("Now give me two integers separated by a * : ");
     scanf("%d*%d", &int_one, &int_two);
     printf("The result of %d multiplied by %d is %d.\n", int_one, int_two, 
             int_one * int_two);
