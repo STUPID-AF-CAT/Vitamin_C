@@ -40,7 +40,16 @@ int main(void)
     printf("%02d/%02d/%04d\n", mm, dd, yyyy);
 
     //performance lab 8, or as I named it: IO_performance3
-    
+    char first_name [15], middle_name [15], last_name [15];
+    printf("Give your first, middle, and last name. Separate them using a tab: ");
+    scanf("%14s\t%14s\t%14s", first_name, middle_name, last_name);
+    printf("%s\t\n%s\t\n%s\t\n", first_name, middle_name, last_name);
+
+    int int_one, int_two;
+    printf("Now give me to integers separated by a * : ");
+    scanf("%d*%d", &int_one, &int_two);
+    printf("The result of %d multiplied by %d is %d.\n", int_one, int_two, 
+            int_one * int_two);
 
     return 0;
 }
