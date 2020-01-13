@@ -8,7 +8,7 @@ int main(void)
     fscanf(stdin, "%d", &userInput);
     u_int32_t bitChecker = 0x01;
     bitChecker = bitChecker << 31;
-    for (bitChecker; bitChecker > 0; bitChecker = bitChecker / 2)
+    for (bitChecker; bitChecker > 0; bitChecker = bitChecker >> 1)
     {
         (userInput & bitChecker)? fprintf(stdout, "1"):fprintf(stdout, "0");
     }
