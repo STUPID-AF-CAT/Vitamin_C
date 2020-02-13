@@ -11,8 +11,18 @@ struct Node {
 /* Function to delete a node in a Doubly Linked List. 
    head_ref --> pointer to head node pointer. 
    del  -->  pointer to node to be deleted. */
-void deleteNode(struct Node** head_ref, struct Node* del) 
+void deleteNode(struct Node** head_ref, int n) 
 { 
+    struct Node* del = *head_ref;
+    for (int i = 0; i < n; i++)
+    {
+        if (del->next == NULL)
+        {
+            printf("\n\ncould knot find item\n\n");
+            return;
+        }
+        del = del->next;
+    }
     /* base case */
     if (*head_ref == NULL || del == NULL) 
         return; 
@@ -85,7 +95,7 @@ int main()
     printList(head); 
   
     /* delete nodes from the doubly linked list */
-    deleteNode(&head, head->next->next); /*delete first node*/
+    deleteNode(&head, 12); /*delete first node*/
     //deleteNode(&head, head->next); /*delete middle node*/
     //deleteNode(&head, head->next); /*delete last node*/
   
